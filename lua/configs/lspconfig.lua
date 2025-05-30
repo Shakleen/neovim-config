@@ -15,6 +15,7 @@ local lspconfig = require("lspconfig")
 lspconfig.servers = {
     "lua_ls",
     "gopls",
+    "pyright",
 }
 
 -- list of servers configured with default config.
@@ -73,6 +74,20 @@ lspconfig.lua_ls.setup({
                 },
                 maxPreload = 100000,
                 preloadFileSize = 10000,
+            },
+        },
+    },
+})
+
+lspconfig.pyright.setup({
+    on_attach = on_attach,
+    on_init = on_init,
+    capabilities = capabilities,
+
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "off", -- Disable type checking diagnostics
             },
         },
     },

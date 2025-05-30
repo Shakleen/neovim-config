@@ -7,6 +7,7 @@ local options = {
         gowork = { "gofumpt", "goimports-reviser" },
         gomod = { "gofumpt", "goimports-reviser" },
         gotmpl = { "gofumpt", "goimports-reviser" },
+        python = { "black" },
     },
 
     formatters = {
@@ -15,6 +16,13 @@ local options = {
         },
         golines = {
             prepend_args = { "--max-len=80" },
+        },
+        black = {
+            prepend_args = {
+                "--fast",
+                "--line-length",
+                "80",
+            },
         },
     },
 
