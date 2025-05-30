@@ -1,6 +1,11 @@
 local options = {
     ensure_installed = {
         "bash",
+        "go",
+        "gomod",
+        "gosum",
+        "gotmpl",
+        "gowork",
         "lua",
         "luadoc",
         "markdown",
