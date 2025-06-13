@@ -98,4 +98,11 @@ return {
             require("configs.mason-dap")
         end,
     },
+
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("configs.indent_color")
+        end,
+    },
 }
