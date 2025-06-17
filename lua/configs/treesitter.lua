@@ -1,6 +1,7 @@
 local options = {
     ensure_installed = {
         "bash",
+        "dart",
         "go",
         "gomod",
         "gosum",
