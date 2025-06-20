@@ -1,5 +1,14 @@
 return {
     {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("configs.harpoon")
+        end,
+    },
+
+    {
         "stevearc/conform.nvim",
         event = "BufWritePre",
         opts = require("configs.conform"),
@@ -118,5 +127,9 @@ return {
 
     {
         "dart-lang/dart-vim-plugin",
+    },
+
+    {
+        "Nash0x7E2/awesome-flutter-snippets",
     },
 }
